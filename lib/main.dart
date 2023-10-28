@@ -20,19 +20,19 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue, // Set background color to blue
-        title: Text('User Listing Application'), // Set the title
+        backgroundColor: Colors.blue, 
+        title: Text('User Listing Application'), 
         actions: [
           IconButton(
-            icon: Icon(Icons.search), // Add a search icon
+            icon: Icon(Icons.search), 
             onPressed: () {
-              // Implement search functionality here
+              
             },
           ),
         ],
       ),
       body: ListView.builder(
-        itemCount: 10, // Assuming you have a list of users
+        itemCount: 10,
         itemBuilder: (context, index) {
           return UserTile();
         },
@@ -46,7 +46,7 @@ class UserTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: CircleAvatar(
-        // User's profile picture (replace with an actual image URL)
+        
         backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/3135/3135715.png'),
       ),
       title: Text('User Full Name'),
@@ -117,7 +117,7 @@ class UserDetailScreen extends StatelessWidget {
 
 final LatLng userLocation = LatLng(-37.3159, 81.1496);
 class MapScreen extends StatelessWidget {
-  final LatLng userLocation; // Replace with actual user's latitude and longitude
+  final LatLng userLocation; 
 
   MapScreen({required this.userLocation});
 
@@ -129,8 +129,8 @@ class MapScreen extends StatelessWidget {
       ),
       body: GoogleMap(
         initialCameraPosition: CameraPosition(
-          target: userLocation, // Set the user's location (LatLng) here
-          zoom: 15.0, // Adjust the initial zoom level as needed
+          target: userLocation, 
+          zoom: 15.0, 
         ),
         markers: <Marker>{
           Marker(
